@@ -1,3 +1,4 @@
+package Zadania_rozdzial_2;
 
 import java.util.Scanner;
 

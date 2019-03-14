@@ -1,3 +1,5 @@
+package Zadania_rozdzial_2;
+
 public class Zadanie_2_29_Wartosc_Calkowita_Znaku {
     public static void main(String[] args) {
         System.out.printf("Znak %c ma wartosc liczbowa %d%n",'A',((int)'A'));

@@ -1,3 +1,5 @@
+package Zadania_rozdzial_2;
+
 import java.util.Scanner;
 
 public class Zadanie_2_5_Iloczyn_3_Liczb {
