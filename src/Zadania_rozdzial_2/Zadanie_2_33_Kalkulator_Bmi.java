@@ -8,7 +8,7 @@ public class Zadanie_2_33_Kalkulator_Bmi {
         Scanner inputWaga = new Scanner(System.in);
         int waga = inputWaga.nextInt();
 
-        System.out.println("Podaj swoj wzrost wcentymetrach ");
+        System.out.println("Podaj swoj wzrost w centymetrach ");
         Scanner inputWzrost = new Scanner(System.in);
         double wzrost = inputWzrost.nextDouble();
 
