@@ -3,17 +3,22 @@ package ZAD_3_17_STR_164;
 public class HealthProfile {
    private String name;
     private String surname;
-    private boolean sex;
+    private String sex;
     private int dayOfBirth;
     private int monthOfBirth;
     private int yearOfBirth;
     private int height;
     private int weight;
 
-    public HealthProfile(String name,String surname,boolean sex,int dayOfBirth,int monthOfBirth,int yearOfBirth,int height,int weight){
+    public HealthProfile(String name,String surname,String sex,int dayOfBirth,int monthOfBirth,int yearOfBirth,int height,int weight){
         this.name = name;
         this.height = height;
         this.weight = weight;
+        this.sex = sex;
+        this.surname = surname;
+        this.dayOfBirth = dayOfBirth;
+        this.monthOfBirth = monthOfBirth;
+        this.yearOfBirth = yearOfBirth;
 
     }
 
@@ -49,7 +54,8 @@ public class HealthProfile {
     }
 
 
-    public boolean isMale() {
+    public String getSex() {
+
         return sex;
     }
 
@@ -61,7 +67,7 @@ public class HealthProfile {
         this.surname = surname;
     }
 
-    public void setSex(boolean sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
@@ -93,6 +99,7 @@ public class HealthProfile {
         return 220-getAge();
     }
 
+
     public double minTargetHeartRate(){
         return 0.5*maxHeartRate();
     }
@@ -104,6 +111,22 @@ public class HealthProfile {
     public double bmi(){
 
         return (getWeight()/(Math.pow((getHeight()/100),2)));
+
+    }
+
+    public void showAllPatientData(HealthProfile patient){
+        System.out.println("Name: "+patient.getName());
+        System.out.println("Surname: "+patient.getSurname());
+        System.out.println("Date of birth: "+patient.getDayOfBirth()+"."+patient.getMonthOfBirth()+"."+patient.getYearOfBirth());
+        System.out.println("Sex: "+patient.getSex());
+        System.out.println("Weight: "+patient.getWeight());
+        System.out.println("Height "+patient.getHeight());
+        System.out.println("Patient is "+patient.getAge()+" years old");
+        System.out.println("Current BMI is: "+patient.bmi());
+        System.out.println("Max heartrate: "+patient.maxHeartRate());
+        System.out.println("Min target heartrate: "+patient.minTargetHeartRate());
+        System.out.println("Max target heartrate: "+patient.maxTargetHeartRate());
+
 
     }
 
