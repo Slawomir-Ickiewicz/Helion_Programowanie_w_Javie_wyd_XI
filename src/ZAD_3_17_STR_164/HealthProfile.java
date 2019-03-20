@@ -1,7 +1,7 @@
 package ZAD_3_17_STR_164;
 
 public class HealthProfile {
-   private String name;
+    private String name;
     private String surname;
     private String sex;
     private int dayOfBirth;
@@ -10,11 +10,11 @@ public class HealthProfile {
     private int height;
     private int weight;
 
-    public HealthProfile(){
+    public HealthProfile() {
 
     }
 
-    public HealthProfile(String name,String surname,String sex,int dayOfBirth,int monthOfBirth,int yearOfBirth,int height,int weight){
+    public HealthProfile(String name, String surname, String sex, int dayOfBirth, int monthOfBirth, int yearOfBirth, int height, int weight) {
         this.name = name;
         this.height = height;
         this.weight = weight;
@@ -95,41 +95,41 @@ public class HealthProfile {
         this.weight = weight;
     }
 
-    public int getAge(){
+    public int getAge() {
         return 2019 - yearOfBirth;
     }
 
-    public int maxHeartRate(){
-        return 220-getAge();
+    public int maxHeartRate() {
+        return 220 - getAge();
     }
 
 
-    public double minTargetHeartRate(){
-        return 0.5*maxHeartRate();
+    public double minTargetHeartRate() {
+        return 0.5 * maxHeartRate();
     }
 
-    public double maxTargetHeartRate(){
-        return 0.85*maxHeartRate();
+    public double maxTargetHeartRate() {
+        return 0.85 * maxHeartRate();
     }
 
-    public double bmi(){
+    public double bmi() {
 
-        return (getWeight()/(Math.pow((getHeight()/100),2)));
+        return (getWeight() / (Math.pow((getHeight() / 100), 2)));
 
     }
 
-    public void showAllPatientData(HealthProfile patient){
-        System.out.println("Name: "+patient.getName());
-        System.out.println("Surname: "+patient.getSurname());
-        System.out.println("Date of birth: "+patient.getDayOfBirth()+"."+patient.getMonthOfBirth()+"."+patient.getYearOfBirth());
-        System.out.println("Sex: "+patient.getSex());
-        System.out.println("Weight: "+patient.getWeight()+"kg");
-        System.out.println("Height: "+patient.getHeight()+"cm");
-        System.out.println("Patient is "+patient.getAge()+" years old");
-        System.out.println("Current BMI is: "+patient.bmi());
-        System.out.println("Max heartrate: "+patient.maxHeartRate());
-        System.out.println("Min target heartrate: "+patient.minTargetHeartRate());
-        System.out.println("Max target heartrate: "+patient.maxTargetHeartRate());
+    public void showAllPatientData(HealthProfile patient) {
+        System.out.println("Name: " + patient.getName());
+        System.out.println("Surname: " + patient.getSurname());
+        System.out.println("Date of birth: " + patient.getDayOfBirth() + "." + patient.getMonthOfBirth() + "." + patient.getYearOfBirth());
+        System.out.println("Sex: " + patient.getSex());
+        System.out.println("Weight: " + patient.getWeight() + "kg");
+        System.out.println("Height: " + patient.getHeight() + "cm");
+        System.out.println("Patient is " + patient.getAge() + " years old");
+        System.out.println("Current BMI is: " + patient.bmi());
+        System.out.println("Max heartrate: " + patient.maxHeartRate());
+        System.out.println("Min target heartrate: " + patient.minTargetHeartRate());
+        System.out.println("Max target heartrate: " + patient.maxTargetHeartRate());
 
 
     }

@@ -9,11 +9,11 @@ package ZAD_3_17_STR_164;
 import java.util.Scanner;
 
 public class HealthProfileTest {
-    public static void main(String[]args){
+    public static void main(String[] args) {
 
         HealthProfile patient1 = new HealthProfile();
 
-        Scanner input  = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Podaj imie pacjenta: ");
         String name = input.next();
         patient1.setName(name);
@@ -42,11 +42,6 @@ public class HealthProfileTest {
         patient1.showAllPatientData(patient1);
 
 
-
-
-
-
-
-}
+    }
 
 }
