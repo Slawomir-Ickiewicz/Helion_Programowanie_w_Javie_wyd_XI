@@ -10,6 +10,10 @@ public class HealthProfile {
     private int height;
     private int weight;
 
+    public HealthProfile(){
+
+    }
+
     public HealthProfile(String name,String surname,String sex,int dayOfBirth,int monthOfBirth,int yearOfBirth,int height,int weight){
         this.name = name;
         this.height = height;
@@ -119,8 +123,8 @@ public class HealthProfile {
         System.out.println("Surname: "+patient.getSurname());
         System.out.println("Date of birth: "+patient.getDayOfBirth()+"."+patient.getMonthOfBirth()+"."+patient.getYearOfBirth());
         System.out.println("Sex: "+patient.getSex());
-        System.out.println("Weight: "+patient.getWeight());
-        System.out.println("Height "+patient.getHeight());
+        System.out.println("Weight: "+patient.getWeight()+"kg");
+        System.out.println("Height: "+patient.getHeight()+"cm");
         System.out.println("Patient is "+patient.getAge()+" years old");
         System.out.println("Current BMI is: "+patient.bmi());
         System.out.println("Max heartrate: "+patient.maxHeartRate());

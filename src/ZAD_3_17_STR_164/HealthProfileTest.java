@@ -11,20 +11,39 @@ import java.util.Scanner;
 public class HealthProfileTest {
     public static void main(String[]args){
 
-    HealthProfile profil1 = new HealthProfile("Adam", "Kowalski", "Male", 23, 11, 2000, 176, 88) {
+        HealthProfile patient1 = new HealthProfile();
 
-
-    };
-
-        HealthProfile profil2 = new HealthProfile("sadsa", "sadaa", "Male", 23, 11, 2000, 176, 88) {
-
-
-        };
         Scanner input  = new Scanner(System.in);
+        System.out.println("Podaj imie pacjenta: ");
+        String name = input.next();
+        patient1.setName(name);
+        System.out.println("Podaj nazwisko pacjenta: ");
+        String surname = input.next();
+        patient1.setSurname(surname);
+        System.out.println("Podaj dzien urodzenia: ");
+        int day = input.nextInt();
+        patient1.setDayOfBirth(day);
+        System.out.println("Podaj miesiac urodzenia: ");
+        int month = input.nextInt();
+        patient1.setMonthOfBirth(month);
+        System.out.println("Podaj rok urodzenia: ");
+        int year = input.nextInt();
+        patient1.setYearOfBirth(year);
+        System.out.println("Podaj wage pacjenta w kilogramach: ");
+        int weight = input.nextInt();
+        patient1.setWeight(weight);
+        System.out.println("Podaj wzrost pacjenta w centymetrach: ");
+        int height = input.nextInt();
+        patient1.setHeight(height);
+        System.out.println("Podaj plec pacjenta: ");
+        String sex = input.next();
+        patient1.setSex(sex);
+
+        patient1.showAllPatientData(patient1);
 
 
-profil1.showAllPatientData(profil1);
-profil2.showAllPatientData(profil2);
+
+
 
 
 
