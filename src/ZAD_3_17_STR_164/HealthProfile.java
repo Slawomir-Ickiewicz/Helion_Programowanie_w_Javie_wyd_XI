@@ -7,7 +7,7 @@ public class HealthProfile {
     private int dayOfBirth;
     private int monthOfBirth;
     private int yearOfBirth;
-    private int height;
+    private double height;
     private int weight;
 
     public HealthProfile() {
@@ -37,7 +37,7 @@ public class HealthProfile {
         return surname;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
@@ -114,8 +114,7 @@ public class HealthProfile {
 
     public double bmi() {
 
-        return (getWeight() / (Math.pow((getHeight() / 100), 2)));
-
+        return getWeight()/(Math.pow((getHeight() / 100),2));
     }
 
     public void showAllPatientData(HealthProfile patient) {
