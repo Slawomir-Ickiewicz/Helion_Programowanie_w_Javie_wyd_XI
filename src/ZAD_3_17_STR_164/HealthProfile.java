@@ -7,7 +7,7 @@ public class HealthProfile {
     private int dayOfBirth;
     private int monthOfBirth;
     private int yearOfBirth;
-    private int height;
+    private double height;
     private int weight;
 
     public HealthProfile() {
@@ -37,7 +37,7 @@ public class HealthProfile {
         return surname;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
@@ -114,8 +114,7 @@ public class HealthProfile {
 
     public double bmi() {
 
-        return (getWeight() / (Math.pow((getHeight() / 100), 2)));
-
+        return getWeight()/(Math.pow((getHeight() / 100),2));
     }
 
     public void showAllPatientData(HealthProfile patient) {
@@ -126,7 +125,14 @@ public class HealthProfile {
         System.out.println("Weight: " + patient.getWeight() + "kg");
         System.out.println("Height: " + patient.getHeight() + "cm");
         System.out.println("Patient is " + patient.getAge() + " years old");
+        System.out.println("");
         System.out.println("Current BMI is: " + patient.bmi());
+        System.out.println("BMI VALUES:");
+        System.out.println("Underweight: less than 18.5");
+        System.out.println("Normal:      between 18.5 and 24.9");
+        System.out.println("Overweight:  between 25 and 29.9");
+        System.out.println("Obese:       30 or greater");
+        System.out.println("");
         System.out.println("Max heartrate: " + patient.maxHeartRate());
         System.out.println("Min target heartrate: " + patient.minTargetHeartRate());
         System.out.println("Max target heartrate: " + patient.maxTargetHeartRate());
