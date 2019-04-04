@@ -28,11 +28,18 @@ public class CreditInfo {
     int depoMonthly;
     int creditLimit;
 
-    public CreditInfo(int accountNo,int beginBalance,int shoppingsMonthly,int depoMonthly,int creditLimit){}
+    public CreditInfo(int accountNo,int beginBalance,int shoppingsMonthly,int depoMonthly,int creditLimit){
+        this.accountNo = accountNo;
+        this.beginBalance = beginBalance;
+        this.shoppingsMonthly = shoppingsMonthly;
+        this.depoMonthly = depoMonthly;
+        this.creditLimit = creditLimit;
+    }
 
 
     public int getNewBalance(){
-        return beginBalance-shoppingsMonthly+depoMonthly;
+        return beginBalance-shoppingsMonthly+depoMonthly
+                ;
     }
 
 }
