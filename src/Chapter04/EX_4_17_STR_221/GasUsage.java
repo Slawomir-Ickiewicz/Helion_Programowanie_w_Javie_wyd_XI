@@ -1,4 +1,4 @@
-package Chapter04.ZAD_4_17_STR_221;
+package Chapter04.EX_4_17_STR_221;
 
 import java.util.Scanner;
 
