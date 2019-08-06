@@ -8,11 +8,11 @@ public class ParkingFee {
 
         double summary = 0;
 
-        if (hours > 3 && hours < 18) {
+        if (hours > 3 && hours < 24) {
             summary = 2 + ((hours - 3) * 0.5);
 
 
-        } else if (hours > 18) {
+        } else if (hours == 24) {
             summary = 10;
         } else if (hours <= 3) {
             summary = 2;
