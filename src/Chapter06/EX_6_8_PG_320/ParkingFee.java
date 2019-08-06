@@ -9,7 +9,7 @@ public class ParkingFee {
         double summary = 0;
 
         if (hours > 3 && hours < 24) {
-            summary = 2 + ((hours - 3) * 0.5);
+            summary = 2 + (Math.ceil(hours - 3) * 0.5);
 
 
         } else if (hours == 24) {
